@@ -3,7 +3,6 @@
 To install, simply copy all files in your `~/.config/nvim` folder on Linux.
 
 ## Todo :
-- Add and configure the `which-key.nvim` plugin
 - Add and configure the `vimtex` plugin
 
 ## Things that might not work everywhere

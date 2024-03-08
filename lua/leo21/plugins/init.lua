@@ -7,6 +7,7 @@ local plugin_list = {
 	"telescope_undo",
 	"lsp_zero",
     "nvim_tree",
+    "which_key"
 }
 
 local plugins = {}
