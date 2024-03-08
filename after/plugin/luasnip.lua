@@ -5,7 +5,7 @@ ls.config.set_config({
     enable_autosnippets = true,
 })
 
-vim.api.nvim_create_user_command("LuaSnipEdit", function ()
+vim.api.nvim_create_user_command("EditSnippet", function ()
     local handle = io.popen("echo $HOME")
     if not handle then
         return
