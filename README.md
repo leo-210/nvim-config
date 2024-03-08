@@ -2,5 +2,8 @@
 
 To install, simply copy all files in your `~/.config/nvim` folder on Linux.
 
+## Todo :
+- Add and configure the `which-key.nvim` plugin
 
-
+## Things that might not work everywhere
+- The custom `:LuaSnipEdit` command, because it assumes the config is at `$HOME/.config/nvim` (you can change this in the `after/plugin/luasnip.lua` file
