@@ -3,7 +3,7 @@
 To install, simply copy all files in your `~/.config/nvim` folder on Linux.
 
 ## Todo :
-- Add and configure the `vimtex` plugin
+*Nothing that I can think of at the moment*
 
 ## Things that might not work everywhere
 - The custom `:EditSnippet` command, because it assumes the Nvim configuration 
