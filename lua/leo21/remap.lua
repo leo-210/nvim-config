@@ -11,7 +11,6 @@ vim.keymap.set("n", "<leader>gg", function ()
 end, { desc = "Open LazyGit" })
 
 -- Keyboard layout specific remap
-vim.keymap.set("n", "<leader>b", "<cmd>w<cr>", { desc = "Save" })
 vim.keymap.set("n", ".", ":")
 vim.keymap.set("n", ":", ":")
 vim.keymap.set({"n", "v"}, "Ê", ".")
