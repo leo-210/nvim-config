@@ -21,3 +21,5 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 vim.opt.colorcolumn = {80}
+
+vim.opt.spelllang = { "en_us", "fr" }
