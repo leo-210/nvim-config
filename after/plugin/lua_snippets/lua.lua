@@ -37,17 +37,22 @@ ls.add_snippets("lua", {
             "\",",
             "    name = \"",
         }),
-        f(copy, 1),
+        d(2, function(args)
+                return sn(nil, {
+                    i(1, args[1])
+                })
+            end,
+        {1}),
         t({
             "\",",
             "    snippetType = \"",
         }),
-        i(2, "snippet"),
+        i(3, "snippet"),
         t({
             "\",",
             "    wordTrig = ",
         }),
-        i(3, "true"),
+        i(4, "true"),
         t({
             ",",
             "}, {",
@@ -59,7 +64,7 @@ ls.add_snippets("lua", {
             "}, {",
             "    condition = "
         }),
-        i(4, "function () end"),
+        i(5, "function () end"),
         t({
             ",",
             "}),"
