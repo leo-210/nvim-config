@@ -1,10 +1,11 @@
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(_, bufnr)
 	lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-require("lspconfig").lua_ls.setup {
+local lspconfig = require("lspconfig")
+lspconfig.lua_ls.setup {
     settings = {
     Lua = {
       diagnostics = {
@@ -24,7 +25,7 @@ require('mason-lspconfig').setup({
 })
 
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+--local cmp_action = require('lsp-zero').cmp_action()
 
 local luasnip = require("luasnip")
 
