@@ -3,7 +3,7 @@
 To install, simply copy all files in your `~/.config/nvim` folder on Linux.
 
 ## Todo :
-*Nothing that I can think of at the moment*
+- Add snippets
 
 ## Things that might not work everywhere
 - The custom `:SnippetEdit` command, because it assumes the Nvim configuration 
