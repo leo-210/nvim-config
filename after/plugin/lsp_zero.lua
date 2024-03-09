@@ -31,8 +31,9 @@ local luasnip = require("luasnip")
 
 cmp.setup({
     sources = {
-        {name = 'nvim_lsp'},
-        {name = 'luasnip'},
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+        { name = 'vimtex' },
     },
     mapping = cmp.mapping.preset.insert({
         -- `Enter` key to confirm completion
