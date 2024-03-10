@@ -1,10 +1,3 @@
-local ls = require("luasnip")
-
-ls.config.set_config({
-    link_children = true,
-    enable_autosnippets = true,
-})
-
 vim.api.nvim_create_user_command("SnippetEdit", function ()
     local handle = io.popen("echo $HOME")
     if not handle then
@@ -14,7 +7,7 @@ vim.api.nvim_create_user_command("SnippetEdit", function ()
     local home = handle:read("*a"):gsub("\n", "")
     handle:close()
 
-    local snippets_dir = home .. "/.config/nvim/after/plugin/lua_snippets" .. "/"
+    local snippets_dir = home .. "/.config/nvim/lua/leo21/lua_snippets" .. "/"
 
     local function file_exists(file)
         local f = io.open(file, "rb")
@@ -40,6 +33,14 @@ vim.api.nvim_create_user_command("SnippetEdit", function ()
         f:write(template:read("*all"))
         template:close()
         f:write('\nls.add_snippets("'..filetype..'", {\n    \n})')
+        f:close()
+
+        f, e = io.open(snippets_dir .. "init.lua", "a")
+        if not f then
+            print(e)
+            return
+        end
+        f:write('\nrequire("leo21.lua.lua_snippets.' .. filetype .. '")')
         f:close()
     end
 

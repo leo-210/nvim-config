@@ -1,14 +1,7 @@
--- put the file names in the 'plugins' folder, not the plugin names
+-- put the module names in the 'plugins' folder, not the plugin names
 local plugin_list = {
-	"telescope",
-	"dracula",
-	"treesitter",
-	"lualine",
-	"telescope_undo",
-	"lsp_zero",
-    "nvim_tree",
-    "which_key",
-    "vimtex",
+    "appearance",
+    "features",
 }
 
 local plugins = {}
