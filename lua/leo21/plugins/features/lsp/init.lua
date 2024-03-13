@@ -1,5 +1,4 @@
 return {
-    { 'neovim/nvim-lspconfig' },
     {
         'williamboman/mason.nvim',
         config = function ()
@@ -18,17 +17,29 @@ return {
             })
         end
     },
-	{
+    {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         config = function ()
             local lsp_zero = require('lsp-zero')
+            lsp_zero.extend_lspconfig()
 
             lsp_zero.on_attach(function(_, bufnr)
                 lsp_zero.default_keymaps({buffer = bufnr})
             end)
 
-            require("leo21.plugins.features.lsp.lspconfig")
+            local lspconfig = require("lspconfig")
+            lspconfig.lua_ls.setup {
+                settings = {
+                    Lua = {
+                        diagnostics = { globals = {'vim'} },
+                    },
+                },
+            }
         end,
     },
+    {
+        'neovim/nvim-lspconfig',
+    },
+
 }
